@@ -9,11 +9,12 @@
 </head>
 <body>
     <input type="text" placeholder="Yourshop.myshopify.com">
-    <button onClick="install">Install</button>
+    <button onClick="install()">Install</button>
     <script>
         function install() {
-            let shop = document.querySelector('input').target.value
-            console.log(shop)
+            let shop = document.querySelector('input').value
+            let url = "https://media-management.herokuapp.com/shopify?shop="+shop+".myshopify.com"
+            window.location.replace(url)
         }
     </script>
 </body>
